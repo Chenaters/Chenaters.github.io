@@ -4,34 +4,34 @@
   {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
 {% endif %}
 
-<img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
-<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}</h1>
+<img src="{{ user_avatar_url }}" class="circle mb-3" style="max-width: 150px;">
+<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{{ user_name }}</h1>
 <p class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
-  {{ user.bio }}
+  {{ user_bio }}
 </p>
 
 {% if include.metadata %}
   <div class="f4 mb-6">
-    {% if user.name %}
+    {% if user_login %}
       <div class="{{ metadata_styles }}">
         {% octicon mark-github height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:GitHub %}
-        <a href="https://github.com/{{ user.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
-          @{{ user.login }}
+        <a href="https://github.com/{{ user_login }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+          @{{ user_login }}
         </a>
       </div>
     {% endif %}
-    {% if user.email %}
+    {% if user_email %}
       <div class="{{ metadata_styles }}">
         {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
-        <a href="mailto:{{ user.email }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
-          {{ user.email }}
+        <a href="mailto:{{ user_email }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+          {{ user_email }}
         </a>
       </div>
     {% endif %}
-    {% if user.location %}
+    {% if user_location %}
       <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
         {% octicon location height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
-        {{ user.location }}
+        {{ user_location }}
       </div>
     {% endif %}
     {% if site.social_media %}
@@ -47,7 +47,7 @@
         {% endfor %}
       </div>
     {% endif %}
-    {% if user.hireable %}
+    {% if user_hireable %}
       <span title="Hire me" class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2">Available for hire</span>
     {% endif %}
   </div>

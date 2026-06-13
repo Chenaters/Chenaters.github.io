@@ -1,5 +1,12 @@
 layout: sidebar
 style: light
+repository: Chenaters/personal-website
+
+profile:
+  name: Chenaters
+  login: Chenaters
+  bio: Personal website for projects, interests, and notes.
+  avatar_url: https://github.com/Chenaters.png
 
 plugins:
   - jekyll-octicons
@@ -27,6 +34,12 @@ projects:
     forks: true
     projects:
     # - repo-name
+
+manual_projects:
+  - name: personal-website
+    html_url: https://github.com/Chenaters/personal-website
+    description: Personal portfolio website built with Jekyll and GitHub Pages.
+    language: HTML
 
 # social_media:
   # behance: your_username

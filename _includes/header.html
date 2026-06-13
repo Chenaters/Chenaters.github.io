@@ -9,13 +9,21 @@
 {% assign posts_total = site.posts | size %}
 
 {% assign user = site.github.owner %}
+{% assign profile = site.profile %}
+{% assign user_login = profile.login | default: user.login %}
+{% assign user_name = profile.name | default: user.name | default: user_login %}
+{% assign user_bio = profile.bio | default: user.bio %}
+{% assign user_avatar_url = profile.avatar_url | default: user.avatar_url %}
+{% assign user_email = profile.email | default: user.email %}
+{% assign user_location = profile.location | default: user.location %}
+{% assign user_hireable = profile.hireable | default: user.hireable %}
 
 {% if page.path contains '_posts' %}
   {% assign page_title = page.title %}
   {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% else %}
-  {% assign page_title = user.name %}
-  {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+  {% assign page_title = user_name %}
+  {% assign meta_description = user_bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% endif %}
 
 <!doctype html>
@@ -24,8 +32,8 @@
     <meta charset="utf-8">
     <title>{{ page_title }}</title>
     <meta name="description" content="{{ meta_description }}" />
-    <meta property="og:title" content="{{ user.name }}" />
-    <meta property="og:image" content="{{ user.avatar_url }}" />
+    <meta property="og:title" content="{{ user_name }}" />
+    <meta property="og:image" content="{{ user_avatar_url }}" />
     <meta property="og:description" content="{{ meta_description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
