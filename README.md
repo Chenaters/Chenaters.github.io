@@ -1,5 +1,18 @@
 # Get started building your personal website
 
+## Local setup
+
+This site is configured for local development with Ruby 4 on Windows.
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File script\build.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File script\serve.ps1
+```
+
+Then open [http://127.0.0.1:4000](http://127.0.0.1:4000).
+
+Update your name, bio, profile image, topics, and fallback projects in `_config.yml`.
+
 ### Showcase your software development skills
 
 This repository gives you the code you'll need to kickstart a personal website that showcases your work as a software developer. And when you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories.
