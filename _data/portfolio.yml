@@ -1,0 +1,99 @@
+stats:
+  - value: CRAN
+    label: Published open-source R package
+  - value: 1,000+
+    label: Families supported through nonprofit software
+  - value: USACO
+    label: Silver Division
+  - value: 2026
+    label: National Merit Finalist
+
+projects:
+  - number: "01"
+    title: pmsesampling
+    category: Open-source research software
+    description: Analytic and simulation tools that estimate the sample size needed to reach a target prediction error in linear regression. Co-authored, documented, and published on CRAN.
+    tags:
+      - R
+      - Simulation
+      - Statistical computing
+    links:
+      - label: View on CRAN
+        url: https://cran.r-project.org/web/packages/pmsesampling/index.html
+      - label: Source code
+        url: https://github.com/Chenaters/pmsesampling
+  - number: "02"
+    title: Plant identification models
+    category: Computer vision research
+    description: Implemented and evaluated MATLAB computer-vision models for plant identification, then analyzed experimental results to improve model performance and workflow reliability.
+    tags:
+      - MATLAB
+      - Computer vision
+      - Model evaluation
+    context: Summer research · 2025
+  - number: "03"
+    title: Community platform
+    category: Nonprofit software
+    description: Contributed to React, .NET, and SQL platform work for Xilin Northwest, helping modernize digital infrastructure used by more than 1,000 families.
+    tags:
+      - React
+      - .NET
+      - SQL
+    context: Volunteer engineering · 2024—2026
+
+experience:
+  - period: 2024—2026
+    role: Researcher
+    organization: Worcester Polytechnic Institute · Remote
+    summary: Developed pmsesampling for predictive-model sample-size simulation and conducted statistical-computing research centered on reproducibility, documentation, and sound methodology.
+  - period: Summer 2025
+    role: Summer Researcher
+    organization: Southern Illinois University Edwardsville
+    summary: Built and evaluated computer-vision models for plant identification in MATLAB, using experimental results to refine the modeling workflow.
+  - period: 2024—2026
+    role: Volunteer Programmer
+    organization: Xilin Northwest Organization
+    summary: Contributed to a nonprofit web platform using React, .NET, and SQL in a mentored engineering environment serving 1,000+ families.
+  - period: Summer 2024
+    role: Summer Researcher
+    organization: Illinois Mathematics and Science Academy
+    summary: Conducted lab research on synthesizing compounds for leishmaniasis therapeutics while working within rigorous experimental and safety protocols.
+
+interests:
+  - index: "01"
+    title: Reliable research software
+    description: Statistical computing, simulation, and open-source tools that make scientific work faster, clearer, and easier to reproduce.
+  - index: "02"
+    title: Machine perception
+    description: Computer vision and machine learning grounded in careful experiments—not just impressive demos.
+  - index: "03"
+    title: Quantitative systems
+    description: Probability, market data, and the engineering challenge of turning noisy signals into disciplined decisions.
+  - index: "04"
+    title: Games with feedback loops
+    description: Tennis, table tennis, and chess—places where practice, pattern recognition, and calm iteration compound.
+
+education:
+  - school: Northwestern University
+    detail: Incoming B.S. student in Computer Science · McCormick School of Engineering
+    period: Starting Fall 2026
+    location: Evanston, Illinois
+  - school: Illinois Mathematics and Science Academy
+    detail: High School Diploma · 3.95 unweighted GPA
+    period: 2023—2026
+    location: Aurora, Illinois
+
+skills:
+  - group: Languages
+    items: R · Python · MATLAB · Java · C++ · C# · SQL
+  - group: Data & ML
+    items: Predictive modeling · Simulation · Computer vision · Model evaluation · Data analysis
+  - group: Web & tools
+    items: React · .NET · Git/GitHub · CRAN · Reproducible documentation
+
+achievements:
+  - National Merit Finalist · 2026
+  - Wharton High School Data Science Challenge Semifinalist · 2025
+  - USACO Silver Division · 2024
+  - ICTM Regional Math Contest, 3rd Place · 2025
+  - Biomedical Engineering Society Meeting Abstract · 2024

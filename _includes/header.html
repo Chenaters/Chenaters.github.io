@@ -1,41 +1,42 @@
-{% if site.style == 'dark' %}
-  {% assign icon_color = "#ffffff" %}
-{% else %}
-  {% assign icon_color = "#24292e" %}
-{% endif %}
-
-{% assign content = page.content %}
-
-{% assign posts_total = site.posts | size %}
-
-{% assign user = site.github.owner %}
-{% assign profile = site.profile %}
-{% assign user_login = profile.login | default: user.login %}
-{% assign user_name = profile.name | default: user.name | default: user_login %}
-{% assign user_bio = profile.bio | default: user.bio %}
-{% assign user_avatar_url = profile.avatar_url | default: user.avatar_url %}
-{% assign user_email = profile.email | default: user.email %}
-{% assign user_location = profile.location | default: user.location %}
-{% assign user_hireable = profile.hireable | default: user.hireable %}
-
-{% if page.path contains '_posts' %}
-  {% assign page_title = page.title %}
-  {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
-{% else %}
-  {% assign page_title = user_name %}
-  {% assign meta_description = user_bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
-{% endif %}
-
+{% assign page_title = page.title | default: site.title %}
+{% assign page_description = page.description | default: site.description %}
+{% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
 <!doctype html>
-<html class="min-height-full">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
     <meta charset="utf-8">
-    <title>{{ page_title }}</title>
-    <meta name="description" content="{{ meta_description }}" />
-    <meta property="og:title" content="{{ user_name }}" />
-    <meta property="og:image" content="{{ user_avatar_url }}" />
-    <meta property="og:description" content="{{ meta_description }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173f35">
+    <title>{% if page.url == '/' %}{{ site.title }} · Researcher &amp; builder{% else %}{{ page_title }} · {{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page_title | escape }}">
+    <meta property="og:description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:image" content="{{ site.profile.avatar_url }}">
+    <meta name="twitter:card" content="summary">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": {{ site.profile.name | jsonify }},
+        "url": {{ site.url | jsonify }},
+        "image": {{ site.profile.avatar_url | jsonify }},
+        "sameAs": [
+          {{ site.profile.github | jsonify }},
+          {{ site.profile.linkedin | jsonify }}
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Illinois Mathematics and Science Academy"
+        }
+      }
+    </script>
   </head>
-  <body class="bg-white min-height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
