@@ -11,7 +11,7 @@ stats:
 projects:
   - number: "01"
     title: Jack, with yield
-    category: Compiler design · IMSA capstone
+    category: Compiler design · Language extension
     description: Extended the Jack language with cooperative coroutines, yield, and finish. The compiler turns resumable tasks into Hack VM state machines, with original demos and documented language limits.
     tags:
       - Python
@@ -20,9 +20,9 @@ projects:
     note: A self-made language extension built on my computer systems coursework.
     links:
       - label: Explore the extension
-        url: https://github.com/Chenaters/imsa-computer-systems/tree/main/jack-coroutines
+        url: https://github.com/Chenaters/elements-of-computing-systems/tree/main/jack-coroutines
       - label: Systems collection
-        url: https://github.com/Chenaters/imsa-computer-systems
+        url: https://github.com/Chenaters/elements-of-computing-systems
   - number: "02"
     title: Deep learning experiments
     category: Machine learning · computer vision
@@ -83,10 +83,10 @@ projects:
     context: Volunteer engineering · 2024—2026
 
 repositories:
-  - name: imsa-computer-systems
+  - name: elements-of-computing-systems
     category: Systems & compilers
     description: Jack coroutine compiler, assembler, VM translator, Tetris, Jack OS, and FPGA coursework.
-    url: https://github.com/Chenaters/imsa-computer-systems
+    url: https://github.com/Chenaters/elements-of-computing-systems
   - name: deep-learning-projects
     category: ML research & experiments
     description: Neural-network projects and coursework, including CSIRO biomass, MRI classification, and related R research packages.
