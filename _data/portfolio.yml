@@ -10,6 +10,36 @@ stats:
 
 projects:
   - number: "01"
+    title: Jack, with yield
+    category: Compiler design · IMSA capstone
+    description: Extended the Jack language with cooperative coroutines, yield, and finish. The compiler turns resumable tasks into Hack VM state machines, with original demos and documented language limits.
+    tags:
+      - Python
+      - Compiler design
+      - Hack VM
+    note: A self-made language extension built on my computer systems coursework.
+    links:
+      - label: Explore the extension
+        url: https://github.com/Chenaters/imsa-computer-systems/tree/main/jack-coroutines
+      - label: Systems collection
+        url: https://github.com/Chenaters/imsa-computer-systems
+  - number: "02"
+    title: Deep learning experiments
+    category: Machine learning · computer vision
+    description: A source collection spanning vision transformers, CNNs, autoencoders, neural NLP, and synthetic anomaly detection. Includes CSIRO pasture biomass experiments using CNN baselines and a small DINO regressor.
+    tags:
+      - PyTorch
+      - TensorFlow
+      - Computer vision
+    note: Exploratory projects with setup instructions and per-project validation notes.
+    links:
+      - label: Browse the collection
+        url: https://github.com/Chenaters/deep-learning-projects
+      - label: CSIRO biomass
+        url: https://github.com/Chenaters/deep-learning-projects/tree/main/projects/csiro-biomass-experiments
+      - label: MRI DINOv3 baseline
+        url: https://github.com/Chenaters/deep-learning-projects/tree/main/projects/rsna-knee-dinov3-baseline
+  - number: "03"
     title: pmsesampling
     category: Open-source research software
     description: Analytic and simulation tools that estimate the sample size needed to reach a target prediction error in linear regression. Co-authored, documented, and published on CRAN.
@@ -22,7 +52,18 @@ projects:
         url: https://cran.r-project.org/web/packages/pmsesampling/index.html
       - label: Source code
         url: https://github.com/Chenaters/pmsesampling
-  - number: "02"
+  - number: "04"
+    title: PDF Bookmarks for ONLYOFFICE
+    category: Developer tools · editor extension
+    description: An offline bookmark panel for the ONLYOFFICE PDF editor. Stores named page markers locally for each document, follows the editor theme, and keeps the PDF itself unchanged.
+    tags:
+      - JavaScript
+      - Local storage
+      - Plugin development
+    links:
+      - label: Source and installation
+        url: https://github.com/Chenaters/onlyoffice-pdf-bookmarks
+  - number: "05"
     title: Plant identification models
     category: Computer vision research
     description: Implemented and evaluated MATLAB computer-vision models for plant identification, then analyzed experimental results to improve model performance and workflow reliability.
@@ -31,7 +72,7 @@ projects:
       - Computer vision
       - Model evaluation
     context: Summer research · 2025
-  - number: "03"
+  - number: "06"
     title: Community platform
     category: Nonprofit software
     description: Contributed to React, .NET, and SQL platform work for Xilin Northwest, helping modernize digital infrastructure used by more than 1,000 families.
@@ -40,6 +81,44 @@ projects:
       - .NET
       - SQL
     context: Volunteer engineering · 2024—2026
+
+repositories:
+  - name: imsa-computer-systems
+    category: Systems & compilers
+    description: Jack coroutine compiler, assembler, VM translator, Tetris, Jack OS, and FPGA coursework.
+    url: https://github.com/Chenaters/imsa-computer-systems
+  - name: deep-learning-projects
+    category: ML research & experiments
+    description: Neural-network projects and coursework, including CSIRO biomass, MRI classification, and related R research packages.
+    url: https://github.com/Chenaters/deep-learning-projects
+  - name: pmsesampling
+    category: Research software
+    description: Co-authored R tools for prediction-error targets, sample-size planning, and empirical learning curves.
+    url: https://github.com/Chenaters/pmsesampling
+  - name: onlyoffice-pdf-bookmarks
+    category: Editor extension
+    description: A persistent local PDF bookmark panel with theme-aware controls and offline operation.
+    url: https://github.com/Chenaters/onlyoffice-pdf-bookmarks
+  - name: kalshi-orderbook
+    category: Market-data engineering · in development
+    description: An asynchronous Python market-data and analytics core with REST/WebSocket handling and fixed-point orderbook models.
+    url: https://github.com/Chenaters/kalshi-orderbook
+  - name: KalshiMarketMaker
+    category: Trading systems research
+    description: Market selection, inventory-aware quoting, position limits, and operational tooling for a market-making project.
+    url: https://github.com/Chenaters/KalshiMarketMaker
+  - name: PythonGames
+    category: Earlier programming work
+    description: Python game projects including checkers, Reversi, Minesweeper, and Sudoku.
+    url: https://github.com/Chenaters/PythonGames
+  - name: polymarket-arbitrage
+    category: Upstream-based study
+    description: A cross-market project based on ImMike's upstream repository; original author credits remain in the source.
+    url: https://github.com/Chenaters/polymarket-arbitrage
+  - name: onlyoffice.github.io
+    category: Upstream reference fork
+    description: A fork of ONLYOFFICE's website, listed as a reference rather than an independently authored project.
+    url: https://github.com/Chenaters/onlyoffice.github.io
 
 experience:
   - period: 2024—2026
@@ -87,9 +166,11 @@ skills:
   - group: Languages
     items: R · Python · MATLAB · Java · C++ · C# · SQL
   - group: Data & ML
-    items: Predictive modeling · Simulation · Computer vision · Model evaluation · Data analysis
+    items: PyTorch · TensorFlow · Predictive modeling · Simulation · Computer vision · Model evaluation
   - group: Web & tools
-    items: React · .NET · Git/GitHub · CRAN · Reproducible documentation
+    items: React · .NET · JavaScript · Git/GitHub · CRAN · Reproducible documentation
+  - group: Systems
+    items: Compiler design · Hack VM · Jack · Verilog/SystemVerilog
 
 achievements:
   - National Merit Finalist · 2026

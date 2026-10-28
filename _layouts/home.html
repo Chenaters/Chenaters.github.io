@@ -86,7 +86,7 @@
           <p class="section-heading__index">02 · Selected work</p>
           <h2 id="work-title">Useful things,<br>carefully made.</h2>
         </div>
-        <p>A focused selection of research software, machine learning, and community-facing engineering.</p>
+        <p>From a new language feature to deep-learning experiments and tools people can use. Explore selected projects below, then browse the repository directory.</p>
       </div>
 
       <div class="project-list">
@@ -102,6 +102,9 @@
                   <li>{{ tag }}</li>
                 {% endfor %}
               </ul>
+              {% if project.note %}
+                <p class="project-card__note">{{ project.note }}</p>
+              {% endif %}
             </div>
             <div class="project-card__links">
               {% if project.links %}
@@ -116,6 +119,31 @@
             </div>
           </article>
         {% endfor %}
+      </div>
+
+      <div class="repository-directory" id="repositories" aria-labelledby="repositories-title">
+        <div class="repository-directory__heading">
+          <div>
+            <p class="eyebrow">More to explore</p>
+            <h3 id="repositories-title">Browse the code.</h3>
+          </div>
+          <p>Source collections, active projects, and earlier experiments. Upstream-based work is labeled with its provenance.</p>
+        </div>
+        <ul class="repository-grid">
+          {% for repository in site.data.portfolio.repositories %}
+            <li>
+              <article class="repository-card">
+                <p class="repository-card__category">{{ repository.category }}</p>
+                <h4>
+                  <a href="{{ repository.url }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ repository.name | escape }} on GitHub">
+                    {{ repository.name }} <span aria-hidden="true">↗</span>
+                  </a>
+                </h4>
+                <p>{{ repository.description }}</p>
+              </article>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
 
       <a class="text-link" href="{{ site.profile.github }}" target="_blank" rel="noreferrer">
