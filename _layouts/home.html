@@ -1,16 +1,16 @@
 {% include header.html %}
 {% include navigation.html %}
-<main id="main-content" class="container page">
-<section id="about" class="intro-panel">
-<div><p class="eyebrow">Software · Statistics · Science</p><h1>Hi, I’m Louis.</h1>
-<p class="intro-lead">{{ site.profile.headline }}</p><p>{{ site.profile.bio }}</p>
-<div class="intro-links"><a class="button" href="{{ '/projects/' | relative_url }}">Explore projects →</a><a href="{{ site.profile.github }}">GitHub ↗</a><a href="{{ site.profile.linkedin }}">LinkedIn ↗</a></div></div>
-<aside class="about-note"><span class="eyebrow">A little about me</span><h2>Curious by nature.<br>Careful by practice.</h2><p>I care about clear assumptions, reproducible experiments, and tools that other people can use.</p><p>Outside of code: tennis, table tennis, and chess.</p><span class="location">{{ site.profile.location }}</span></aside>
+<main id="main-content" class="container home-page">
+<section id="about" class="home-intro">
+<div><h1>{{ site.profile.name }}</h1><p>Hi there!</p>
+<p>I’m an incoming Northwestern computer science student interested in software, statistics, and science. I build research tools and experiment with computer vision and systems. Outside of academics, I enjoy tennis, table tennis, and chess.</p>
+<p id="contact">Feel free to reach out at <a href="mailto:{{ site.profile.email }}">{{ site.profile.email }}</a>.</p></div>
+<img class="home-portrait" src="{{ site.profile.avatar_url }}" alt="Louis Chen" width="240" height="240">
 </section>
-<section id="work"><div class="section-heading"><div><p class="eyebrow">Selected work</p><h2>Things I’ve been building</h2></div><a href="{{ '/projects/' | relative_url }}">All projects →</a></div>
-<div class="project-grid">{% for project in site.data.portfolio.projects limit: 4 %}{% include project-entry.html %}{% endfor %}</div>
-<p id="repositories" class="section-link"><a href="{{ '/projects/#repositories' | relative_url }}">Browse more repositories →</a></p></section>
-<section id="experience" class="background-panel"><div><p class="eyebrow">Background</p><h2>Research and community software</h2><p>My work spans statistical computing at Worcester Polytechnic Institute, computer vision at Southern Illinois University Edwardsville, and volunteer development for Xilin Northwest.</p></div><a id="resume" class="button button-light" href="{{ '/resume/' | relative_url }}">View résumé →</a></section>
-<section id="contact" class="contact-section"><h2>Let’s connect.</h2><p>Interested in research, software, or something I’m building? <a href="mailto:{{ site.profile.email }}">Send me an email ↗</a></p></section>
+<section id="work" class="home-work"><h2>Selected work</h2>
+<article><h3><a href="https://github.com/Chenaters/elements-of-computing-systems/tree/main/jack-coroutines">Jack, with yield</a></h3><p>Extending a programming language with cooperative coroutines and resumable tasks.</p></article>
+<article><h3><a href="https://cran.r-project.org/web/packages/pmsesampling/index.html">pmsesampling</a></h3><p>Open-source R tools for sample-size planning and prediction-error targets, published on CRAN.</p></article>
+<p class="home-all"><a href="{{ '/projects/' | relative_url }}">All projects →</a></p>
+</section>
 </main>
 {% include footer.html %}

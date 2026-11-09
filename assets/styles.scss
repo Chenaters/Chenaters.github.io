@@ -109,3 +109,37 @@ body { background: white; font-size: 11pt; }
 .resume-panel { border: 0; padding: 12px 0; }
 .resume-entry, .project-entry { break-inside: avoid; }
 }
+
+/* A quiet, text-led homepage; project cards stay on the Projects page. */
+.home { background: #fafafa; color: #151b25; }
+.home .container { max-width: 860px; }
+.home-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; }
+.home-header nav { gap: 16px; }
+.home-header nav a { padding: 0; border-radius: 0; color: #20242b; text-decoration: underline; background: none; font-weight: 400; }
+.home-social { display: flex; align-items: center; gap: 16px; font-size: 14px; }
+.home-social a { color: #20242b; }
+.home-social a:first-child { font-size: 21px; font-weight: 750; text-decoration: none; }
+.home-page { padding-top: 68px; padding-bottom: 36px; }
+.home-intro { display: grid; grid-template-columns: 1.65fr 1fr; align-items: center; gap: 58px; }
+.home-intro h1 { font-size: clamp(42px, 6vw, 68px); font-weight: 800; letter-spacing: -.04em; line-height: 1.05; margin: 0 0 14px; }
+.home-intro p { font-size: 16px; line-height: 1.75; color: #4b5563; margin-bottom: 12px; }
+.home-intro a, .home-work a { color: inherit; }
+.home-portrait { display: block; width: 100%; max-width: 240px; height: auto; aspect-ratio: 1; object-fit: cover; justify-self: center; }
+.home-work { margin-top: 34px; }
+.home-work h2 { font-size: 23px; margin-bottom: 18px; }
+.home-work article { padding: 16px 0; border-top: 1px solid #e3e5e8; }
+.home-work article:last-of-type { border-bottom: 1px solid #e3e5e8; }
+.home-work h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: 0; }
+.home-work h3 a { text-decoration: none; }
+.home-work h3 a:hover { text-decoration: underline; }
+.home-work article p { font-size: 15px; margin: 0; }
+.home-all { margin-top: 16px; font-size: 14px; }
+.home .site-footer { border-top: 0; font-size: 12px; opacity: .8; }
+@media (max-width: 640px) {
+.home-page { padding-top: 36px; }
+.home-intro { grid-template-columns: 1fr; gap: 20px; }
+.home-portrait { width: 160px; justify-self: start; }
+.home-header { gap: 12px; flex-wrap: wrap; }
+.home-header nav { gap: 14px; }
+.home-social { gap: 10px; }
+}
