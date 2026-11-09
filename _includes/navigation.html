@@ -1,7 +1,8 @@
-<header class="container site-header">
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="{{ '/' | relative_url }}">Louis Chen<span class="brand-dot">.</span></a>
 <nav aria-label="Primary navigation">
 <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-<a href="{{ '/projects.html' | relative_url }}"{% if page.url == '/projects.html' %} aria-current="page"{% endif %}>Projects</a>
-<a href="{{ '/resume.html' | relative_url }}"{% if page.url == '/resume.html' %} aria-current="page"{% endif %}>Résumé</a>
-</nav><a class="contact-link" href="mailto:{{ site.profile.email }}">Email ↗</a>
-</header>
+<a href="{{ '/projects/' | relative_url }}"{% if page.url == '/projects/' %} aria-current="page"{% endif %}>Projects</a>
+<a href="{{ '/resume/' | relative_url }}"{% if page.url == '/resume/' %} aria-current="page"{% endif %}>Résumé</a>
+</nav><a class="contact-link" href="mailto:{{ site.profile.email }}">Get in touch ↗</a>
+</div></header>

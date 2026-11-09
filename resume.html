@@ -1,11 +1,14 @@
 ---
 layout: default
+permalink: /resume/
 title: Résumé
 description: Louis Chen's experience, education, and technical skills.
 ---
-<section id="experience"><h2>Experience</h2>
+<p class="page-intro">A snapshot of my research, engineering experience, and technical background.</p>
+<div class="resume-grid"><section id="experience" class="resume-panel resume-wide"><h2>Experience</h2>
 {% for item in site.data.portfolio.experience %}<article class="resume-entry"><h3>{{ item.role }}</h3><p class="meta">{{ item.organization }} · {{ item.period }}</p><p>{{ item.summary }}</p></article>{% endfor %}</section>
-<section id="education"><h2>Education</h2>
+<section id="education" class="resume-panel"><h2>Education</h2>
 {% for item in site.data.portfolio.education %}<article class="resume-entry"><h3>{{ item.school }}</h3><p>{{ item.detail }}</p><p class="meta">{{ item.period }} · {{ item.location }}</p></article>{% endfor %}</section>
-<section><h2>Skills</h2><dl>{% for skill in site.data.portfolio.skills %}<dt>{{ skill.group }}</dt><dd>{{ skill.items }}</dd>{% endfor %}</dl></section>
-<section><h2>Selected achievements</h2><ul>{% for achievement in site.data.portfolio.achievements %}<li>{{ achievement }}</li>{% endfor %}</ul></section>
+<section class="resume-panel"><h2>Skills</h2><dl>{% for skill in site.data.portfolio.skills %}<dt>{{ skill.group }}</dt><dd>{{ skill.items }}</dd>{% endfor %}</dl></section>
+<section class="resume-panel resume-wide"><h2>Selected achievements</h2><ul>{% for achievement in site.data.portfolio.achievements %}<li>{{ achievement }}</li>{% endfor %}</ul></section>
+</div>

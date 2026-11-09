@@ -1,7 +1,9 @@
 <article class="project-entry">
+<div class="project-top"><span class="project-number">{{ project.number }}</span><p class="meta">{{ project.category }}</p></div>
 <h3>{{ project.title }}</h3>
-<p class="meta">{{ project.category }}{% if project.context %} · {{ project.context }}{% endif %}</p>
-<p>{{ project.description }}</p>
+<p class="project-description">{{ project.description }}</p>
+<ul class="tags" aria-label="Technologies">{% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+{% if project.context %}<p class="note">{{ project.context }}</p>{% endif %}
 {% if project.note %}<p class="note">{{ project.note }}</p>{% endif %}
-{% if project.links %}<ul class="project-links" aria-label="{{ project.title | escape }} links">{% for link in project.links %}<li><a href="{{ link.url }}">{{ link.label }} ↗</a></li>{% endfor %}</ul>{% endif %}
+{% if project.links %}<ul class="project-links" aria-label="{{ project.title | escape }} links">{% for link in project.links %}<li><a href="{{ link.url }}">{{ link.label }} <span aria-hidden="true">↗</span></a></li>{% endfor %}</ul>{% endif %}
 </article>

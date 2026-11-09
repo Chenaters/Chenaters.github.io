@@ -1,10 +1,12 @@
 ---
 layout: default
+permalink: /projects/
 title: Projects
 description: Software projects and research by Louis Chen.
 ---
+<p class="page-intro">Research tools, systems experiments, and software built for people. Each project brings together a different part of what I like to work on.</p>
 <div class="project-grid">{% for project in site.data.portfolio.projects %}{% include project-entry.html %}{% endfor %}</div>
-<section id="repositories"><h2>More on GitHub</h2>
+<section id="repositories"><div class="section-heading"><div><p class="eyebrow">Further exploration</p><h2>More on GitHub</h2></div><a href="{{ site.profile.github }}">GitHub profile ↗</a></div><p>Source collections, ongoing experiments, and earlier work. Forks and upstream-based projects are labeled below.</p>
 <ul class="repository-list">{% for repository in site.data.portfolio.repositories %}<li>
 <h3><a href="{{ repository.url }}">{{ repository.name }}</a></h3>
 <p class="meta">{{ repository.category }}</p><p>{{ repository.description }}</p>
