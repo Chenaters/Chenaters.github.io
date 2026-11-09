@@ -1,0 +1,11 @@
+---
+layout: default
+title: Projects
+description: Software projects and research by Louis Chen.
+---
+<div class="project-grid">{% for project in site.data.portfolio.projects %}{% include project-entry.html %}{% endfor %}</div>
+<section id="repositories"><h2>More on GitHub</h2>
+<ul class="repository-list">{% for repository in site.data.portfolio.repositories %}<li>
+<h3><a href="{{ repository.url }}">{{ repository.name }}</a></h3>
+<p class="meta">{{ repository.category }}</p><p>{{ repository.description }}</p>
+</li>{% endfor %}</ul></section>

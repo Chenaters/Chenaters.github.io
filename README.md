@@ -1,6 +1,6 @@
 # Louis Chen — personal website
 
-Source for [chenaters.github.io](https://chenaters.github.io), a curated one-page portfolio covering research, software projects, experience, education, and personal interests.
+Source for [chenaters.github.io](https://chenaters.github.io), a minimal portfolio with Home, Projects, and Résumé pages.
 
 ## Local development
 
@@ -23,7 +23,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File script\build.ps1
 
 - `_data/portfolio.yml` — projects, experience, education, skills, achievements, and interests
 - `_config.yml` — identity, contact links, and site metadata
-- `_layouts/home.html` — one-page portfolio structure
+- `_layouts/home.html` — home page structure
 - `assets/styles.scss` — responsive visual system and print styles
 
 GitHub Pages publishes the `master` branch at the root user site. Public pages intentionally omit a phone number, street address, and the private source documents used to prepare the résumé content.
+
+- `projects.html` — all selected projects and repository links
+- `resume.html` — experience, education, skills, and achievements
+- `_includes/project-entry.html` — shared project entry

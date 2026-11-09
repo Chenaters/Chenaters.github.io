@@ -1,12 +1,4 @@
 {% include header.html %}
 {% include navigation.html %}
-
-<main id="main-content" class="article-shell section-pad">
-  <article class="container article">
-    <a class="article__back" href="{{ '/' | relative_url }}">← Back home</a>
-    <h1>{{ page.title }}</h1>
-    {{ content }}
-  </article>
-</main>
-
+<main id="main-content" class="container page"><h1>{{ page.title }}</h1>{{ content }}</main>
 {% include footer.html %}
